@@ -13,10 +13,7 @@ mongoose
     console.log("connected");
   })
   .catch((err) => {
-    console.log(
-      `error connecting to database with ${process.env.USER}:${process.env.PASSWORD}`,
-      err
-    );
+    console.log(`error connecting to database.`, err);
   });
 
 var indexRouter = require("./routes/index");

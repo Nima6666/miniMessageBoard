@@ -10,10 +10,10 @@ const url = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.
 mongoose
   .connect(url)
   .then(() => {
-    console.log("connected", url);
+    console.log("connected");
   })
   .catch((err) => {
-    console.log(err);
+    console.log("error connecting to database.", err);
   });
 
 var indexRouter = require("./routes/index");

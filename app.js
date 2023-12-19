@@ -1,18 +1,19 @@
 var createError = require("http-errors");
+require("dotenv").config();
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const mongoose = require("mongoose");
-
-const messageSchema = require("./schema/message");
+const url = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.qmmq6cq.mongodb.net/userMessage`;
 
 mongoose
-  .connect(
-    "mongodb+srv://nima:2367@cluster0.qmmq6cq.mongodb.net/userMessage?retryWrites=true&w=majority"
-  )
+  .connect(url)
   .then(() => {
-    console.log("connected");
+    console.log("connected", url);
+  })
+  .catch((err) => {
+    console.log(err);
   });
 
 var indexRouter = require("./routes/index");

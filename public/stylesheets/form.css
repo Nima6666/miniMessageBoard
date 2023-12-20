@@ -59,3 +59,9 @@ button:hover {
   color: white;
   box-shadow: 1px 1px 10px yellowgreen;
 }
+
+@media all and (max-width: 900px) {
+  form {
+    width: 90vw;
+  }
+}

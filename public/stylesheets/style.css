@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  font-size: 14px;
+}
 h1 {
   text-align: center;
   padding: 20px;
@@ -12,8 +15,12 @@ h1 {
   color: white;
   margin-bottom: 20px;
 }
+p {
+  text-align: center;
+  font-size: 1.5rem;
+}
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: wheat;
 }
 
@@ -22,6 +29,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 50px;
 }
 .message {
   width: 50vw;
@@ -60,4 +68,13 @@ a {
 a:hover {
   background-color: rgb(117, 117, 117);
   color: white;
+}
+@media all and (max-width: 900px) {
+  html {
+    font-size: 22px;
+  }
+  .message {
+    width: 90vw;
+    justify-content: space-around;
+  }
 }
